@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WatchNow</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Swiper.js for Screenshot Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <!-- Animate.css for Smooth Menu Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <img src="assets/images/watchnow-logo.png" alt="WatchNow" class="logo">
+            
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <nav class="nav-menu animate__animated">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+        <div class="container">
+            <h1>Watch Your Favorite Shows Anytime, Anywhere</h1>
+            <p>Experience seamless streaming with WatchNow – unlimited access to your favorite content.</p>
+            <a href="#download" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose WatchNow?</h2>
+            <div class="feature-boxes">
+                <div class="feature-box">
+                    <i class="fa-solid fa-video"></i>
+                    <h4>High-Quality Streaming</h4>
+                    <p>Enjoy content in Full HD and 4K resolution.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-clock"></i>
+                    <h4>24/7 Access</h4>
+                    <p>Stream your favorite shows anytime, anywhere.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <h4>Secure and Private</h4>
+                    <p>Your data is safe with our advanced security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Section -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <h2>App Screenshots</h2>
+            <div class="screenshot-wrapper">
+                <div class="iphone-frame">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/images/screen1.jpg" alt="Screenshot 1"></div>
+                            <div class="swiper-slide"><img src="assets/images/screen2.jpg" alt="Screenshot 2"></div>
+                            <div class="swiper-slide"><img src="assets/images/screen3.jpg" alt="Screenshot 3"></div>
+                            <div class="swiper-slide"><img src="assets/images/screen4.jpg" alt="Screenshot 4"></div>
+                            <div class="swiper-slide"><img src="assets/images/screen5.jpg" alt="Screenshot 5"></div>
+                            <div class="swiper-slide"><img src="assets/images/screen6.jpg" alt="Screenshot 6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Download the App</h2>
+            <p>Get WatchNow on your device and start streaming today!</p>
+            <div class="download-buttons">
+                <a href="#" class="btn-dark"><i class="fa-brands fa-google-play"></i> Google Play</a>
+                <a href="#" class="btn-dark"><i class="fa-brands fa-apple"></i> App Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p>&copy; 2025 WatchNow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            let menu = document.querySelector(".nav-menu");
+            menu.classList.toggle("active");
+            if (menu.classList.contains("active")) {
+                menu.classList.add("animate__fadeInDown");
+            } else {
+                menu.classList.remove("animate__fadeInDown");
+            }
+        }
+
+        var swiper = new Swiper(".swiper-container", {
+            loop: true,
+            autoplay: {
+                delay: 0.2,
+            },
+        });
+    </script>
+
+</body>
+</html>

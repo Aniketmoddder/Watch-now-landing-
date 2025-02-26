@@ -1,0 +1,260 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #121318;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    background: transparent;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #AA0000;
+}
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+    .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: #1A1B22;
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        animation: fadeInDown 0.5s ease-in-out;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Hero Section  */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero p {
+    color: #bbb;
+    font-size: 18px;
+}
+
+.btn {
+    background: #AA0000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: #880000;
+}
+
+/* Features Section.*/
+.features {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feature-boxes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: #1A1B22;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: #AA0000;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .feature-box {
+        width: 100%;
+    }
+}
+
+/*  Screenshot Section  */
+.screenshots {
+    text-align: center;
+    padding: 50px 0;
+    background: #1A1B22;
+    position: relative;
+}
+
+.screenshot-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* iPhone Frame */
+.iphone-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 200%;
+    background: url("https://i.ibb.co/KjMnvr8G/Picsart-25-02-26-12-07-22-539.png") no-repeat center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Screenshot Slider in iphone */
+.swiper-container {
+    position: absolute;
+    width: 84%;
+    height: 84%;
+    top: 8%;
+    left: 8%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .screenshot-wrapper {
+        max-width: 300px;
+    }
+}
+
+
+.download {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.btn-dark {
+    background: #333;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.btn-dark:hover {
+    background: #222;
+}
+
+/*Footer */
+.footer {
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #bbb;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
